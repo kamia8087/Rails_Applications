@@ -1,0 +1,195 @@
+// Place all the styles related to the Questions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.ask-ques-link {
+    color: #666666;
+    font-weight: 500;
+    font-family: inherit;
+    padding: 15px 0;
+    &:hover {
+        text-decoration: none;
+        color: #d43f3a;
+        border-bottom: 2px solid #d43f3a;
+    }
+}
+
+.modal-header {
+    background-color: rgb(250, 250, 250);
+}
+
+.modal-body {
+    padding: 32px 32px 24px 32px;
+}
+
+.modal-footer {
+    padding: 15px 0 0 0;
+}
+
+.tips-content {
+    border-width: 1px;
+    border-color: #e2e2e2;
+    border-radius: 0;
+    border-bottom-style: solid;
+    margin-bottom: 16px!important;
+    padding-bottom: 8px!important;
+}
+.tip-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.tip-title {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    font-weight: 500!important;
+}
+
+.check-icon {
+    display: inline-block;
+    line-height: 0;
+    color: #329bff;
+}
+.tip-list-item{
+    margin-bottom: 8px!important;
+}
+
+.user-asks {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #949494;
+    font-size: 15px;
+}
+
+.ask-modal-header {
+    margin-bottom: 8px!important;
+}
+
+.question-text-area {
+    font-family: 'q_serif',Georgia,Times,"Times New Roman","Hiragino Kaku Gothic Pro","Meiryo",serif;
+    border: none;
+    font-size: 17px;
+    font-weight: 600;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    height: 43px;
+    margin: 0px;
+    width: 530px;
+}
+
+.answer-text-area{
+    padding: 5px 16px 11px;
+    min-height: 100px;
+    width: 400px;
+    background-color: #fff;
+    counter-reset: indent0 indent1 indent2 citation;
+    border: none;
+    font-family: auto;
+    font-size: 16px;
+}
+.submit-answer {
+    margin: 0;
+    padding: 8px;
+    border-top: 1px solid #e2e2e2;
+    text-align: left;
+    background: #fafafa;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.outline-style {
+    border: 1px solid #efefef;
+    background-color: #fff;
+    border-radius: 4px;
+    border-bottom: 1px solid #e2e2e2;
+    margin-bottom: 8px;
+    padding: 16px;
+    padding-top: 16px;
+}
+
+.feed-add-header {
+    margin-bottom: 4px;
+    color: #949494;
+}
+
+.feed-add-link {
+    font-family: 'q_serif',Georgia,Times,"Times New Roman","Hiragino Kaku Gothic Pro","Meiryo",serif;
+    font-weight: bold;
+    line-height: 1.3;
+    font-size: 18px;
+    color: #949494;
+    display: block;
+}
+
+.section-header {
+    padding: 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    display: flex;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.question-container {
+    padding: 0;
+}
+
+.each-question {
+    border-bottom: 1px solid #e2e2e2;
+    padding: 16px;
+}
+
+.icon-frame {
+    display: flex;
+    width: 24px;
+    height: 21px;
+    font-size: 20px;
+    color: #d43f3a;
+    align-self: center;
+}
+
+.header_text_main {
+    float: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.question-text {
+    font-family: 'q_serif',Georgia,Times,"Times New Roman","Hiragino Kaku Gothic Pro","Meiryo",serif;
+    font-weight: bold;
+    line-height: 1.3;
+    color: #333;
+    font-size: 18px;
+}
+
+.main-question {
+    tab-size: 4;
+    word-break: break-word;
+}
+.answer-btn {
+    padding-top: 7px!important;
+    padding-bottom: 7px!important;
+    font-size: 14px!important;
+}
+.answer_link {
+    color: #666666;
+    text-decoration: none;
+    &:hover {
+       color: #666666;
+       text-decoration: none;
+    }
+}
+.answer-inner{
+    position: relative;
+    border: 1px solid #e2e2e2;
+    border-radius: 3px;
+}
+.answer-editor-header {
+    position: relative;
+    background: #fafafa;
+    padding: 10px 8px;
+    border-radius: 3px 3px 0 0;
+    min-height: 39px;
+}

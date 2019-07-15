@@ -1,0 +1,41 @@
+<div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+          <%= link_to "Ask Question", '#', class: 'ask-ques-link'%>
+        <% link_to "Ask Question", '#', class: 'modal-link'%>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="tips-content">
+          <p class="tip-title">Tips on getting good answers quickly</p>
+          <ul class="tip-list">
+            <div class="tip-list-item">
+              <span class="glyphicon glyphicon-check check-icon"></span>
+              <span>Make sure your question hasn't been asked already</span>
+            </div>
+            <div class="tip-list-item">
+              <span class="glyphicon glyphicon-check check-icon"></span>
+              <span>Keep your question short and to the point</span>
+            </div>
+            <div class="tip-list-item">
+              <span class="glyphicon glyphicon-check check-icon"></span>
+              <span>Double-check grammar and spelling</span>
+            </div>
+          </ul>
+        </div>
+        <div class="ask-modal-header">
+          <div class="user-asks">
+            <span class="user-ask"><%= current_user.name %> asked</span>
+          </div>
+        </div>
+        <div class="question-container">
+          <div class="question-content">
+            <%= render 'questions/new' %>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>  
+

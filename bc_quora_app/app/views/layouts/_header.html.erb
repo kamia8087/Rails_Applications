@@ -1,0 +1,36 @@
+<nav class="navbar app-header">
+  <div class="container">
+    <div class="navbar-header">
+      <%= link_to image_tag("bc.png", alt: "BC logo", class: 'bc-logo'), '#', class: 'navbar-brand'%>
+    </div>
+    <% if logged_in? %>
+      <ul class="nav navbar-nav">
+        <li class="active list_item">
+          <%= link_to "Home", home_path, class: 'nav_item_text' %>
+        </li>
+        <li class="list_item">
+          <%= link_to "Answers", answers_path, class: 'nav_item_text' %>
+        </li>
+      </ul>
+      <%= form_tag(home_path, method: :get, class: 'navbar-form navbar-left') do %>
+        <div class="input-group">
+          <%= text_field_tag(:search, params[:search], class: 'form-control', placeholder: "Search") %>
+          <div class="input-group-btn">
+            <%= submit_tag (" "), class: 'btn btn-default' %>
+          </div>
+        </div>
+      <% end %>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="list_item">
+          <%= link_to current_user.name, user_path(current_user.id) , class: ' nav_item_text' %>
+        </li>
+        <li class="list_item">
+          <%= link_to "Logout", logout_path, method: :delete, class: ' nav_item_text' %>
+        </li>
+        <li>
+          <%= link_to "Add Question or Link", new_question_path, {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#askQuestionModal', class:"btn btn-danger navbar-btn"} %>
+        </li>
+      </ul>
+    <% end %>
+  </div>
+</nav>

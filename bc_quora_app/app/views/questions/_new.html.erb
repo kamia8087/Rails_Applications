@@ -1,0 +1,7 @@
+<%= form_for(@question, class:'question-form') do |f| %>
+    <%= f.text_area :content, class: 'question-text-area', placeholder: 'Start your question with "What", "How", "Why", etc.'%>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <%= f.submit "Add Question", class: "btn btn-primary" %>
+    </div>
+<% end %>

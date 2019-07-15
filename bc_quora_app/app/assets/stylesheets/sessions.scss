@@ -1,0 +1,40 @@
+// Place all the styles related to the sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.bg_container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    overflow: hidden;
+}
+
+.login-section {
+    background: #fff;
+    border: 1px solid #e2e2e2;
+    box-shadow: 0 0 5px #888;
+    border-radius: 4px;
+    padding-top: 25px;
+    width: 650px;
+    position: absolute;
+    bottom: initial;
+    left: 0;
+    right: 0;
+    margin: auto;
+    overflow-y: hidden;
+    top: 20%;
+}
+
+.sign-up-section {
+    margin-bottom: 4%;
+    border-right: 1px solid #d8d4d4;
+}
+
+.form-name {
+    font-size: 14px;
+    font-weight: 600;
+}
+form {
+    margin-top: 5px!important;
+}

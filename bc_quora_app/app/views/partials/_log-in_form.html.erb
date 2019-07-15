@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-md-9 col-md-offset-1">
+    <span class="form-name">Login</span>
+
+    <%= form_for(:session, url: login_path, class: 'login-form') do |f| %>
+
+      <%= f.email_field :email, class: 'form-control', placeholder: 'Email' %><br>
+
+      <%= f.password_field :password, class: 'form-control', placeholder: 'Password' %><br>
+
+      <%= f.submit "Log in", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

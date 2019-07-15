@@ -1,0 +1,24 @@
+// Place all the styles related to the Answers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.answer-left-section {
+    width: 142px;
+    float: left;
+    min-height: 1px;
+    margin-left: 30px;
+    clear: left;
+    font-size: 13px;
+    h3 {
+        color: #333;
+        font-weight: 500;
+        position: relative;
+        border-bottom: 1px solid #e2e2e2;
+        margin-bottom: 16px;
+        padding-bottom: 8px;
+        font-size: 15px;
+        letter-spacing: 0;
+        text-transform: none; 
+        text-align: center;
+    }
+}

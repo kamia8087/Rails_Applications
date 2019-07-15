@@ -1,0 +1,9 @@
+<div class="feed-add-question-container outline-style">
+    <div class="feed-add-header">
+        <span class="glyphicon glyphicon-user nav_item_icon"></span> 
+        <span class="nav_item_text"><%= current_user.name %></span>
+    </div>
+    <div class="ask-question-link">
+        <%= link_to "What is your Question", new_question_path, {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#askQuestionModal', class:'feed-add-link'} %>
+    </div>
+</div>

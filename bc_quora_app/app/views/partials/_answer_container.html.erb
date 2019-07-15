@@ -1,0 +1,27 @@
+<% if @answers.any? %>
+    <div class="question-container outline-style">
+        <div class="all-questions">
+            <div class="question-header">
+                <div class="section-header">
+                    <div class="icon-frame">
+                        <span class="glyphicon glyphicon-globe"></span>
+                    </div>
+                    <div class="header-text">
+                        <span class="header_text_main">Answers by You</span>
+                    </div>
+                </div>
+                <% @answers.each do |ans| %>
+                    <% question = Question.find_by(id: ans.question_id) %>
+                    <div class="each-question">
+                        <div class="question-text">
+                            <span class="main-question"><%= question.content %></span>
+                        </div>
+                        <div class="answer-text">
+                            <span class="main-question"><%= ans.content %></span>
+                        </div>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+<% end %>

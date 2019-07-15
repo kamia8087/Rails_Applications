@@ -1,0 +1,56 @@
+<% if @questions.present? %>
+    <div class="question-container outline-style">
+        <div class="all-questions">
+            <div class="question-header">
+                <div class="section-header">
+                    <div class="icon-frame">
+                        <span class="glyphicon glyphicon-globe"></span>
+                    </div>
+                    <div class="header-text">
+                        <span class="header_text_main">Questions for You</span>
+                    </div>
+                </div>
+                <% @questions.each do |ques| %>
+                    <div class="each-question">
+                        <div class="question-text">
+                            <div class="row">
+                                <span class="main-question col-md-10"><%= ques.content %></span>
+                                <div class="vote-container col-md-2">
+                                    <%= link_to "", upvote_path(:id => ques.id), class: "glyphicon glyphicon-upload increment up" %>
+                                    <%= link_to "", downvote_path(:id => ques.id), class: "glyphicon glyphicon-download increment down"%>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="action-bar">
+                            <div class="write-answer">
+                                <span class="answer-btn glyphicon glyphicon-edit"></span>
+                                <a class="answer_link" type="button" class="btn" data-toggle="collapse" data-target="#answer<%= ques.id %>">Answer</a>
+                                <div id="answer<%= ques.id %>" class="collapse">
+                                    <div class="answer-inner">
+                                        <div class="editor-header">
+                                            <div class="answer-editor-header">
+                                                <div class="answer-header-content">
+                                                    <span class="glyphicon glyphicon-user nav_item_icon"></span> 
+                                                    <span class="nav_item_text"><%= current_user.name %></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="editor">
+                                            <%= form_for(@answer) do |f| %>
+                                                <%= f.hidden_field :question_id, :value => ques.id %>
+                                                <%= f.text_area :content,class: 'answer-text-area', placeholder: 'Write your answer'%>
+                                                <div class="submit-answer">
+                                                    <%= f.submit "Submit", class: "btn btn-primary" %>
+                                                </div>
+                                            <% end %>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+<% end %>
