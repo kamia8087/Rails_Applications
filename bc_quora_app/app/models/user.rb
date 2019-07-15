@@ -13,4 +13,19 @@ class User < ApplicationRecord
     def downcase_email
         self.email = email.downcase
     end
+
+    def get_feed(topic:)
+      show_recommendations = self.show_recommendations?
+      answers = if show_recommendations
+                  Answer.get_popular_answers_close_to_topic(topic: topic)
+                else
+                  Answer.get_popular_answers_for_the_topic(topic: topic)
+                end
+
+      answers
+    end
+
+    def show_recommendations?
+      self.id % 2 == 0
+    end
 end
